@@ -47,6 +47,11 @@ x = {'a' : 1, 'b' : 2}
 for idx, char in enumerate("text", start=0):
     print("Char {}: {}".format(idx, char))
 ```
+### Iterate over array in backward
+```
+for elem in range(len(arr) - 1, -1 ,-1):
+    print(elem)
+```
 ### Iterate over string in backward
 ```
 for elem in sampleStr[ : :-1]:
