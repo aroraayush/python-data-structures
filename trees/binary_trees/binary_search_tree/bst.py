@@ -6,7 +6,7 @@
 # ------------------------------------------------------
 # from trees.binary_trees.binary_search_tree.bst_node import Node
 
-class BST:
+class Treenode:
 
     def __init__(self, val):
         self.left = None
@@ -18,13 +18,13 @@ class BST:
         if self.val:     # If no val empty tree, use base case
             if val < self.val:
                 if self.left is None:
-                    self.left = BST(val)
+                    self.left = Treenode(val)
                 else:
                     self.left.insert(val)
             else:
             # elif val > self.val:
                 if self.right is None:
-                    self.right = BST(val)
+                    self.right = Treenode(val)
                 else:
                     self.right.insert(val)
         else:
@@ -57,7 +57,7 @@ class BST:
             traversed_arr += self.in_order_traversal(root.right)
         return traversed_arr
 
-root = BST(27)
+root = Treenode(27)
 root.insert(14)
 root.insert(35)
 root.insert(10)
