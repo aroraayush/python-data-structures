@@ -70,7 +70,8 @@ n_ary_tree.add_child(30, 10)
 n_ary_tree.add_child(50, 20)
 n_ary_tree.add_child(40, 20)
 n_ary_tree.add_child(70, 20)
-n_ary_tree.add_child(78, 20)
+n_ary_tree.add_child(78, 70)
 n_ary_tree.add_child(11, 30)
 
 print('n_ary_tree.size: ', n_ary_tree.size)  # 7
+n_ary_tree
