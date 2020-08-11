@@ -13,13 +13,12 @@ from . import Node
 
 class MyLinkedList:
 
-    def __init__(self):
+    def __init__(self, val=None):
         """
         Initialize your data structure here.
         """
-        def __init__(self, val):
-            self.next = None
-            self.val = val
+        self.next = None
+        self.val = val
         
 
     def get(self, index: int) -> int:
@@ -51,9 +50,11 @@ class MyLinkedList:
         node.val = val
         node.next = None
         while self is not None:
-            tail = self
+            tail = MyLinkedList()
+            tail.val = self.val
+            tail.next = self.next
             self = tail.next
-            
+
         tail.next = node
         return None
         
@@ -76,7 +77,9 @@ class MyLinkedList:
                 self.next = new_node
                 return None
             else:
-                node = self
+                node = MyLinkedList()
+                node.val = self.val
+                node.next = self.next
                 self = node.next
                 idx += 1
         return None
@@ -96,7 +99,9 @@ class MyLinkedList:
                 self.next = self.next.next
                 return None
             else:
-                node = self
+                node = MyLinkedList()
+                node.val = self.val
+                node.next
                 self = node.next
                 idx += 1
         
